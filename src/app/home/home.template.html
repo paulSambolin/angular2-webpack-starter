@@ -1,10 +1,5 @@
 <div class="card-container">
-  <h1 x-large class="sample-content">Your Content Here</h1>
-
-  <div>
-    For material design components use the <a href="https://github.com/AngularClass/angular2-webpack-starter/tree/material2"><b>material2</b></a> branch
-  </div>
-
+  <h1 x-large class="sample-content">SweetSkills</h1>
   <hr>
 
   <div>
@@ -39,3 +34,10 @@
   </div>
 
 </div>
+
+<alert type="info">Hello from ng2-bootstrap  {{ date.toDateString() }}</alert>
+  <div style="display:inline-block; min-height:290px;">
+    <datepicker [(ngModel)]="date" showWeeks="true"></datepicker>
+  </div>
+
+  

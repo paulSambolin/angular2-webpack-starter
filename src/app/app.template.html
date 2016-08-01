@@ -1,0 +1,34 @@
+<div>
+  <a [href]="url">
+    <img [src]="sweetSkillsLogo" style="width:50px;height:50px">
+  </a>
+  <nav>
+    <div (click)="$event.preventDefault()">
+      <span dropdown>
+        <a href id="navigation-dropdown" dropdownToggle><h1>SweetSkills</h1></a>
+        <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="navigation-dropdown">
+          <li role="menuitem"><a class="dropdown-item" [routerLink]=" ['./'] ">Dashboard</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]=" ['./home'] ">Skills</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]=" ['./detail'] ">Projects</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]=" ['./about'] ">Heat Map</a></li>
+        </ul>
+      </span>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+<footer>
+  <span>SweetSkills for more info check out our <a [href]="url">Github Repository</a></span>
+  <div>
+    <a [href]="url">
+      <img [src]="sweetSkillsLogo" style="width:50px;height:50px">
+    </a>
+  </div>
+</footer>
